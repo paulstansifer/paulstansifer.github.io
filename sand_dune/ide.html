@@ -57,15 +57,28 @@
                 multi-select. Use F1 to activate the command palette.</i>
             <hr>
             <p><b>Sand Dune</b> is a language with a visual pattern-matching system (inspired by
-            PuzzleScript).</p>
+                PuzzleScript).</p>
 
             <p>I didn't have much time, so it's pretty basic. Mainly, it can express 1D cellular
-            automata, though with arbitrarily large neighborhoods and a nice notation.
-            It wouldn't be hard to add a more powerful model (like PuzzleScript's powerful
-            bag-of-atoms-with-directions model) in place of the simple cell-or-no-cell booleans.</p>
+                automata, though with arbitrarily large neighborhoods and a nice notation.
+                It wouldn't be hard to add a more powerful model (like PuzzleScript's powerful
+                bag-of-atoms-with-directions model) in place of the simple cell-or-no-cell booleans.
+            </p>
 
-            <p>To the left is the famously Turing-complete Rule 110, with a pattern with a right-moving
-            glider. Press Ctrl-E to run it, but note that the client-side evaluation is <em>slooow</em>.</p>
+            <p>To the left is the famously Turing-complete Rule 110, with a pattern with a
+                right-moving
+                glider. Press Ctrl-E to run it, but note that the client-side evaluation is
+                <em>slooow</em>.
+            </p>
+
+            <p>Sand Dune is implemented in <a
+                    href="https://github.com/paulstansifer/unseemly/">Unseemly</a>, a macro language
+                with support for typed macros. This IDE and its syntax-highlighter were
+                automatically-derived.
+                The actual typedness of Unseemly macros wasn't too useful for this language, but a
+                couple of ancillary features of Unseemly (arbitrary scannerless grammars for macros,
+                and support for Macro By Example like in Rust or Scheme) were quite helpful.
+            </p>
 
             <hr>
             <pre>

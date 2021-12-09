@@ -1,4 +1,4 @@
-importScripts('wasm/libunseemly.js')
+importScripts('./wasm/libunseemly.js')
 
 const { html__eval_program, generate__ace_rules, generate__ace_rules__for, stash_lang }
     = wasm_bindgen;

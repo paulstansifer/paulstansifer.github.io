@@ -24,6 +24,8 @@
 
         .prose {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: 100vh;
+            overflow: scroll;
         }
 
         #working {
@@ -53,28 +55,30 @@
         <div class="column prose">
             <div id="output"></div>
             <div id="working" style="display: none">working...</div>
-            <i> Use Ctrl-E to execute. Use Ctrl-, to open settings. Use Ctrl-D to
-                multi-select. Use F1 to activate the command palette.</i>
+            <i> While cursor is in the editor: Use Ctrl-E to execute. Use Ctrl-, to open settings. Use Ctrl-D to
+                multi-select.</i>
             <hr>
             <p><b>Sand Dune</b> is a language with a visual pattern-matching system (inspired by
-                PuzzleScript).</p>
+                <a
+                    href="https://www.puzzlescript.net/Documentation/rules101.html">PuzzleScript</a>).
+            </p>
 
             <p>I didn't have much time, so it's pretty basic. Mainly, it can express 1D cellular
-                automata, though with arbitrarily large neighborhoods and a nice notation.
+                automata, though with arbitrarily-large neighborhoods and a nice notation.
                 It wouldn't be hard to add a more powerful model (like PuzzleScript's powerful
                 bag-of-atoms-with-directions model) in place of the simple cell-or-no-cell booleans.
             </p>
 
             <p>To the left is the famously Turing-complete Rule 110, with a pattern with a
-                right-moving
-                glider. Press Ctrl-E to run it, but note that the client-side evaluation is
+                right-moving glider. Press Ctrl-E to run it, but note that the client-side
+                evaluation is
                 <em>slooow</em>.
             </p>
 
             <p>Sand Dune is implemented in <a
                     href="https://github.com/paulstansifer/unseemly/">Unseemly</a>, a macro language
-                with support for typed macros. This IDE and its syntax-highlighter were
-                automatically-derived.
+                with support for typed macros. This IDE and its syntax-highlighter (not that there's
+                much syntax) were automatically-derived.
                 The actual typedness of Unseemly macros wasn't too useful for this language, but a
                 couple of ancillary features of Unseemly (arbitrary scannerless grammars for macros,
                 and support for Macro By Example like in Rust or Scheme) were quite helpful.
@@ -90,6 +94,8 @@ Rules
 Start
   # The "default wallpaper", with a glider moving to the right:
   [   +  ++ +++++   +++ +++   +  ++ +++++   +  ++ +++++   +  ++ +++++]
+Steps
+  12
             </pre>
             <hr>
             <pre>
@@ -100,6 +106,8 @@ Rules
   [ No cell | No cell | No cell ] -> [ _ | No cell | _ ]
 Start
   [               +               ]
+Steps
+  16
             </pre>
             <hr>
             <pre>
@@ -111,6 +119,8 @@ Rules
   [ No cell | No cell | cell] -> [ _ | cell | _ ]
 Start
   [               +               ]
+Steps
+  15
             </pre>
             <hr>
             <pre>
@@ -121,6 +131,8 @@ Rules
   [ _ | cell | _ | _ | _ | _ ] -> [ cell | No cell | _ | _ | _ | cell]
 Start
   [             +                                         ]
+Steps
+  15
             </pre>
 
 
